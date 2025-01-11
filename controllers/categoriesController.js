@@ -3,7 +3,7 @@ const Category = require('../models/Category');
 const httpText = require('../utils/httpText');
 const appError = require('../utils/appError');
 
-const getCategorys = asyncWrapper(async (req, res, next) => {
+const getCategories = asyncWrapper(async (req, res, next) => {
   const category = await Category.find({},'-__v -createdAt -updatedAt');
   if (!category.length) {
     const error = appError.create('No Categorys found!', 404, httpText.FAIL);
@@ -30,7 +30,7 @@ const getCategory = asyncWrapper(async (req, res, next) => {
 
 const createCategory = asyncWrapper(async (req, res, next) => {
   const categoryName = req.body?.name;
-  const isExist = await Category.findOne({ name: CategoryName });
+  const isExist = await Category.findOne({ name: categoryName });
   if (isExist) {
     const error = appError.create(`The Category '${categoryName}' already exists.`, 409, httpText.FAIL);
     return next(error);
@@ -73,7 +73,7 @@ const deleteCategory = asyncWrapper(async (req, res, next) => {
 });
 
 module.exports = {
-  getCategorys,
+  getCategories,
   getCategory,
   createCategory,
   updateCategory,

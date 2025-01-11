@@ -67,7 +67,11 @@ app.use('/product/sale', require('./routes/api/product/sale.js'));
 app.use('/product/stock', require('./routes/api/product/stock.js'));
 app.use('/product/product-specification', require('./routes/api/product/productSpecification.js'));
 app.use('/product/pricing', require('./routes/api/product/pricing'));
-app.use('/product', require('./routes/api/product'));
+app.use('/product', require('./routes/api/product')); 
+
+app.use("/sold-items", require("./routes/api/soldItem"));
+
+app.use("/orders", require('./routes/api/order.js')); 
 
 // 404 Error Handler for Unmatched Routes
 app.all('*', (req, res) => {

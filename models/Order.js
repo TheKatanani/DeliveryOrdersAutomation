@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const orderDeliverySchema = requrie('./orderDelivery.js')
+const orderDeliverySchema = require('./orderDelivery.js')
 const orderSchema = new mongoose.Schema({
   customerId: {
     type: mongoose.Schema.Types.ObjectId,

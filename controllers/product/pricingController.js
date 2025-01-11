@@ -1,4 +1,4 @@
-const Pricing = require('../../models/Pricing');
+const Pricing = require('../../models/product/pricing');
 const asyncWrapper = require('../../middleware/asyncWrapper');
 const appError = require('../../utils/appError');
 const httpText = require('../../utils/httpText');

@@ -1,4 +1,4 @@
-const Supplier = require('../../models/Supplier');
+const Supplier = require('../../models/product/supplier');
 const asyncWrapper = require('../../middleware/asyncWrapper');
 const appError = require('../../utils/appError');
 const httpText = require('../../utils/httpText');

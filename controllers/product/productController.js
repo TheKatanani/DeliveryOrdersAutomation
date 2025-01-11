@@ -1,4 +1,4 @@
-const Product = require('../../models/Product');
+const Product = require('../../models/product/index.js');
 const asyncWrapper = require('../../middleware/asyncWrapper');
 const appError = require('../../utils/appError');
 const httpText = require('../../utils/httpText');

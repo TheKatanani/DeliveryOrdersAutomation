@@ -10,7 +10,7 @@ const verifyRoles = (...allowdRoles) => {
     }
     const result = roles?.some((role) => allowdRoles.includes(+role));
 
-
+    
     if (!result) {
       const error = appError.create(`unauthorized`, 401, httpText.FAIL);
       return next(error);
